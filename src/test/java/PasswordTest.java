@@ -105,12 +105,12 @@ public class PasswordTest {
     @Test
     @DisplayName("Password valid check")
     public void password_7_a() {
-        assertTrue(p1.checkRepeatedNumbers("validPa$$w0rd"));
+        assertTrue(p1.checkPassword("validPa$$w0rd"));
     }
 
     @Test
     @DisplayName("Password invalid check")
     public void password_7_b() {
-        assertFalse(p1.checkRepeatedNumbers("validPa$$w0rdOhWaitItsInvalidCauseItsWayTooLong"));
+        assertFalse(p1.checkPassword("validPa$$w0rdOhWaitItsInvalidCauseItsWayTooLong"));
     }
 }
