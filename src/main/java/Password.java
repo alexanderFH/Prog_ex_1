@@ -1,3 +1,6 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Password {
 
     public boolean checkPassword(String password) {
@@ -9,7 +12,9 @@ public class Password {
     }
 
     public boolean checkBigSmall(String password) {
-        return false;
+        Matcher matcherBig = Pattern.compile("[A-Z]+").matcher(password);
+        Matcher matcherSmall = Pattern.compile("[a-z]+").matcher(password);
+        return matcherBig.results().count() > 0 && matcherSmall.results().count() > 0;
     }
 
     public boolean checkNumbers(String password) {
