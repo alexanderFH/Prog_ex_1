@@ -74,7 +74,7 @@ public class PasswordTest {
 
     @Test
     @DisplayName("Password running numbers - pass12a3")
-    public void password_5_b() {
+    public void password_5_c() {
         assertFalse(p1.checkRunningNumbers("pass12a3"));
     }
 
