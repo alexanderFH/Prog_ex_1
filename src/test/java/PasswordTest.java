@@ -39,7 +39,7 @@ public class PasswordTest {
     @Test
     @DisplayName("Password numbers - numbers")
     public void password_3_b() {
-        assertFalse(p1.checkNumbers("numb3r5"));
+        assertTrue(p1.checkNumbers("numb3r5"));
     }
 
     @Test
