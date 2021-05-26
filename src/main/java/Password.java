@@ -18,7 +18,7 @@ public class Password {
     }
 
     public boolean checkNumbers(String password) {
-        return false;
+        return password.matches(".*[0-9]+.*");
     }
 
     public boolean checkSpecialChars(String password) {
