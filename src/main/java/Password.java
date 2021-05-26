@@ -22,7 +22,7 @@ public class Password {
     }
 
     public boolean checkSpecialChars(String password) {
-        return false;
+        return password.matches(".*[\\(\\)#\\$?!%/@]+.*");
     }
 
     public boolean checkRunningNumbers(String password) {
