@@ -13,6 +13,12 @@ public class PasswordTest {
     }
 
     @Test
+    @DisplayName("Password length - not too short")
+    public void password_1_b() {
+        assertTrue(p1.checkLength("nottooshort"));
+    }
+
+    @Test
     @DisplayName("Password BigSmall")
     public void password_2() {
         assertEquals(0, 0,
