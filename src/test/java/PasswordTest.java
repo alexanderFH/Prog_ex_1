@@ -37,6 +37,12 @@ public class PasswordTest {
     }
 
     @Test
+    @DisplayName("Password numbers - numbers")
+    public void password_3_b() {
+        assertFalse(p1.checkNumbers("numb3r5"));
+    }
+
+    @Test
     @DisplayName("Password specialchar")
     public void password_4() {
         assertEquals(0, 0,
