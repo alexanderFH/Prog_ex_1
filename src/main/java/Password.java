@@ -35,7 +35,7 @@ public class Password {
         int startCount = count;
         for (Character c : password.toCharArray()) {
             if (Character.isDigit(c)) {
-                if (Math.abs(Character.getNumericValue(c) - digit) == difference)
+                if (Character.getNumericValue(c) - digit == difference)
                     count++;
                 else
                     count = startCount;
