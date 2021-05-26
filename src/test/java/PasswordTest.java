@@ -61,6 +61,12 @@ public class PasswordTest {
     }
 
     @Test
+    @DisplayName("Password running numbers - pass124")
+    public void password_5_b() {
+        assertFalse(p1.checkRunningNumbers("pass124"));
+    }
+
+    @Test
     @DisplayName("Password repeated number")
     public void password_6() {
         assertEquals(0, 0,
