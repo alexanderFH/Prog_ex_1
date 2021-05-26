@@ -55,10 +55,9 @@ public class PasswordTest {
     }
 
     @Test
-    @DisplayName("Password running numbers")
-    public void password_5() {
-        assertEquals(0, 0,
-                "running numbers");
+    @DisplayName("Password running numbers - pass123")
+    public void password_5_a() {
+        assertTrue(p1.checkRunningNumbers("pass123"));
     }
 
     @Test
