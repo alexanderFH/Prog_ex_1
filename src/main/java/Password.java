@@ -23,4 +23,8 @@ public class Password {
     public boolean checkRunningNumbers(String password) {
         return false;
     }
+
+    public boolean checkRepeatedNumbers(String password) {
+        return false;
+    }
 }
