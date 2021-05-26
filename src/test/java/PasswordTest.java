@@ -25,6 +25,12 @@ public class PasswordTest {
     }
 
     @Test
+    @DisplayName("Password BigSmall - TrUe")
+    public void password_2_b() {
+        assertTrue(p1.checkBigSmall("NotAllLowerCase"));
+    }
+
+    @Test
     @DisplayName("Password numbers")
     public void password_3() {
         assertEquals(0, 0,
