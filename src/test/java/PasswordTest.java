@@ -49,6 +49,12 @@ public class PasswordTest {
     }
 
     @Test
+    @DisplayName("Password specialchar - $pec!alChars")
+    public void password_4_b() {
+        assertTrue(p1.checkSpecialChars("$pec!alChars"));
+    }
+
+    @Test
     @DisplayName("Password running numbers")
     public void password_5() {
         assertEquals(0, 0,
