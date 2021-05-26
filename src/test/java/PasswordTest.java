@@ -25,6 +25,12 @@ public class PasswordTest {
     }
 
     @Test
+    @DisplayName("Password length - too long")
+    public void password_1_c() {
+        assertFalse(p1.checkLength("nottooshortbutsadlyitswaytoolong"));
+    }
+
+    @Test
     @DisplayName("Password BigSmall - false")
     public void password_2_a() {
         assertFalse(p1.checkBigSmall("alllowercase"));
@@ -94,5 +100,17 @@ public class PasswordTest {
     @DisplayName("Password repeated number - pass111")
     public void password_6_b() {
         assertFalse(p1.checkRepeatedNumbers("pass111"));
+    }
+
+    @Test
+    @DisplayName("Password valid check")
+    public void password_7_a() {
+        assertTrue(p1.checkRepeatedNumbers("validPa$$w0rd"));
+    }
+
+    @Test
+    @DisplayName("Password invalid check")
+    public void password_7_b() {
+        assertFalse(p1.checkRepeatedNumbers("validPa$$w0rdOhWaitItsInvalidCauseItsWayTooLong"));
     }
 }
