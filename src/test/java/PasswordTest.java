@@ -4,11 +4,12 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PasswordTest {
+    Password p1 = new Password();
+
     @Test
-    @DisplayName("Password length")
-    public void password_1() {
-        assertEquals(0, 0,
-                "Length");
+    @DisplayName("Password length - too short")
+    public void password_1_a() {
+        assertFalse(p1.checkLength("short"));
     }
 
     @Test
