@@ -22,10 +22,26 @@ public class Password {
     }
 
     public boolean checkSpecialChars(String password) {
-        return password.matches(".*[\\(\\)#\\$?!%/@]+.*");
+        return password.matches(".*[()#$?!%/@]+.*");
     }
 
     public boolean checkRunningNumbers(String password) {
+        int digit = 11;
+        int count = 0;
+        for (Character c : password.toCharArray()) {
+            if (Character.isDigit(c)) {
+                if (Math.abs(Character.getNumericValue(c) - digit) == 1)
+                    count++;
+                else
+                    count = 0;
+                digit = Character.getNumericValue(c);
+            }else {
+                count = 0;
+                digit = 11;
+            }
+            if (count == 2)
+                return true;
+        }
         return false;
     }
 
