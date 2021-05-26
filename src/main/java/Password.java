@@ -26,20 +26,24 @@ public class Password {
     }
 
     public boolean checkRunningNumbers(String password) {
-        int digit = 11;
-        int count = 0;
+        return checkNumberRelationsInString(password, 11, 0, 1, 2);
+    }
+
+    private boolean checkNumberRelationsInString(String password, int digit, int count, int difference, int threshold) {
+        int startDigit = digit;
+        int startCount = count;
         for (Character c : password.toCharArray()) {
             if (Character.isDigit(c)) {
-                if (Math.abs(Character.getNumericValue(c) - digit) == 1)
+                if (Math.abs(Character.getNumericValue(c) - digit) == difference)
                     count++;
                 else
-                    count = 0;
+                    count = startCount;
                 digit = Character.getNumericValue(c);
-            }else {
-                count = 0;
-                digit = 11;
+            } else {
+                count = startCount;
+                digit = startDigit;
             }
-            if (count == 2)
+            if (count == threshold)
                 return true;
         }
         return false;
