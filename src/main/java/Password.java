@@ -1,14 +1,14 @@
 public class Password {
 
-    public boolean checkPassword(String password){
+    public boolean checkPassword(String password) {
         return false;
     }
 
-    public boolean checkLength(String password){
-        return false;
+    public boolean checkLength(String password) {
+        return password.length() > 7 && password.length() < 26;
     }
 
-    public boolean checkBigSmall(String password){
+    public boolean checkBigSmall(String password) {
         return false;
     }
 
