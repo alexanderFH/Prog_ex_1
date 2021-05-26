@@ -73,6 +73,12 @@ public class PasswordTest {
     }
 
     @Test
+    @DisplayName("Password running numbers - pass12a3")
+    public void password_5_b() {
+        assertFalse(p1.checkRunningNumbers("pass12a3"));
+    }
+
+    @Test
     @DisplayName("Password repeated number - pass11111")
     public void password_6_a() {
         assertTrue(p1.checkRepeatedNumbers("pass11111"));
