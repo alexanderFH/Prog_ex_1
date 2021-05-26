@@ -21,7 +21,7 @@ public class PasswordTest {
     @Test
     @DisplayName("Password BigSmall - false")
     public void password_2_a() {
-        assertTrue(p1.checkBigSmall("alllowercase"));
+        assertFalse(p1.checkBigSmall("alllowercase"));
     }
 
     @Test
@@ -31,10 +31,9 @@ public class PasswordTest {
     }
 
     @Test
-    @DisplayName("Password numbers")
-    public void password_3() {
-        assertEquals(0, 0,
-                "numbers");
+    @DisplayName("Password numbers - nonumbers")
+    public void password_3_a() {
+        assertFalse(p1.checkNumbers("nonumbers"));
     }
 
     @Test

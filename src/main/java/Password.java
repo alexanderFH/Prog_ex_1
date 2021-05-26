@@ -11,4 +11,8 @@ public class Password {
     public boolean checkBigSmall(String password){
         return false;
     }
+
+    public boolean checkNumbers(String password) {
+        return false;
+    }
 }
