@@ -15,4 +15,8 @@ public class Password {
     public boolean checkNumbers(String password) {
         return false;
     }
+
+    public boolean checkSpecialChars(String password) {
+        return false;
+    }
 }

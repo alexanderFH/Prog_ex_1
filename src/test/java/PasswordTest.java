@@ -43,10 +43,9 @@ public class PasswordTest {
     }
 
     @Test
-    @DisplayName("Password specialchar")
-    public void password_4() {
-        assertEquals(0, 0,
-                "specialchar");
+    @DisplayName("Password specialchar - nospecialchars")
+    public void password_4_a() {
+        assertFalse(p1.checkSpecialChars("nospecialchars"));
     }
 
     @Test
