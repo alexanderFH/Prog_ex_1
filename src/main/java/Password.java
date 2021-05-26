@@ -13,9 +13,7 @@ public class Password {
     }
 
     public boolean checkBigSmall(String password) {
-        Matcher matcherBig = Pattern.compile("[A-Z]+").matcher(password);
-        Matcher matcherSmall = Pattern.compile("[a-z]+").matcher(password);
-        return matcherBig.results().count() > 0 && matcherSmall.results().count() > 0;
+        return password.matches(".*[A-Z]+.*") && password.matches(".*[a-z]+.*");
     }
 
     public boolean checkNumbers(String password) {
@@ -23,7 +21,7 @@ public class Password {
     }
 
     public boolean checkSpecialChars(String password) {
-        return password.matches(".*[()#$?!%/@]+.*");
+        return password.matches("([a-zA-Z0-9]*[()#$?!%/@]+[a-zA-Z0-9]*)+");
     }
 
     public boolean checkRunningNumbers(String password) {

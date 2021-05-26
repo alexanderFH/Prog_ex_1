@@ -61,9 +61,15 @@ public class PasswordTest {
     }
 
     @Test
+    @DisplayName("Password specialchar - invalidspecialchars")
+    public void password_invalid_specialchars() {
+        assertFalse(p1.checkSpecialChars("Pa§§word"));
+    }
+
+    @Test
     @DisplayName("Password specialchar - $pec!alChars")
     public void password_specialchars() {
-        assertTrue(p1.checkSpecialChars("$pec!alChars"));
+        assertTrue(p1.checkSpecialChars("s$pec!alChars"));
     }
 
     @Test
