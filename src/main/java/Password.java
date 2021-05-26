@@ -4,7 +4,8 @@ import java.util.regex.Pattern;
 public class Password {
 
     public boolean checkPassword(String password) {
-        return false;
+        return password != null && checkLength(password) && checkBigSmall(password) && checkNumbers(password) &&
+                checkSpecialChars(password) && !checkRunningNumbers(password) && !checkRepeatedNumbers(password);
     }
 
     public boolean checkLength(String password) {
