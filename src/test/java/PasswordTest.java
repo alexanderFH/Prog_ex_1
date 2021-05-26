@@ -19,10 +19,9 @@ public class PasswordTest {
     }
 
     @Test
-    @DisplayName("Password BigSmall")
-    public void password_2() {
-        assertEquals(0, 0,
-                "BigSmall");
+    @DisplayName("Password BigSmall - false")
+    public void password_2_a() {
+        assertTrue(p1.checkBigSmall("alllowercase"));
     }
 
     @Test

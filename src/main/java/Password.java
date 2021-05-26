@@ -7,4 +7,8 @@ public class Password {
     public boolean checkLength(String password){
         return false;
     }
+
+    public boolean checkBigSmall(String password){
+        return false;
+    }
 }
