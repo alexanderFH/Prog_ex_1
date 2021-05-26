@@ -50,6 +50,6 @@ public class Password {
     }
 
     public boolean checkRepeatedNumbers(String password) {
-        return false;
+        return checkNumberRelationsInString(password, 11, 0, 0, 3);
     }
 }
