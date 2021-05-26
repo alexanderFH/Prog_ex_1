@@ -105,7 +105,7 @@ public class PasswordTest {
     @Test
     @DisplayName("Password valid check")
     public void password_7_a() {
-        assertTrue(p1.checkPassword("validPa$$w0rd"));
+        assertTrue(p1.checkPassword("v4lidPa$$w0rd"));
     }
 
     @Test
