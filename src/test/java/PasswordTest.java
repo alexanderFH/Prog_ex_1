@@ -7,6 +7,12 @@ public class PasswordTest {
     Password p1 = new Password();
 
     @Test
+    @DisplayName("nullcheck")
+    public void password_0() {
+        assertFalse(p1.checkPassword(null));
+    }
+
+    @Test
     @DisplayName("Password length - too short")
     public void password_1_a() {
         assertFalse(p1.checkLength("short"));
